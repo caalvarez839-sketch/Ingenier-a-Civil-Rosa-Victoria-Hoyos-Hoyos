@@ -1,0 +1,239 @@
+/* ================================
+   PALETA CORPORATIVA INGENIERÍA CIVIL
+   ================================ */
+:root {
+    --azul-oscuro: #002b5c;
+    --azul-medio: #005b96;
+    --azul-claro: #007acc;
+    --gris-fondo: #f4f6f7;
+    --gris-medio: #d9d9d9;
+    --blanco: #ffffff;
+    --negro: #111111;
+}
+
+/* ================================
+   RESET GENERAL
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--gris-fondo);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+header {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 50px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.7rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ================================
+   MENÚ DE NAVEGACIÓN
+   ================================ */
+nav {
+    background: var(--azul-medio);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: var(--blanco);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: var(--azul-claro);
+}
+
+/* ================================
+   SECCIONES GENERALES
+   ================================ */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: var(--azul-oscuro);
+    margin-bottom: 25px;
+    border-left: 7px solid var(--azul-claro);
+    padding-left: 12px;
+}
+
+/* ================================
+   TARJETAS - GALERÍAS
+   ================================ */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background: var(--blanco);
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: 0.3s ease;
+    text-align: center;
+    border-top: 5px solid var(--azul-medio);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* ================================
+   CONTACTO
+   ================================ */
+.contacto a {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    color: var(--azul-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contacto a:hover {
+    color: var(--azul-claro);
+}
+
+/* ================================
+   BOTONES FLOTANTES
+   ================================ */
+.botones-flotantes {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.botones-flotantes a {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blanco);
+    font-size: 28px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.35);
+    transition: 0.3s ease;
+}
+
+/* WhatsApp */
+.btn-wsp {
+    background: #25D366;
+}
+
+.btn-wsp:hover {
+    transform: scale(1.15);
+    background: #1eb85c;
+}
+
+/* Correo */
+.btn-mail {
+    background: var(--azul-medio);
+}
+
+.btn-mail:hover {
+    transform: scale(1.15);
+    background: var(--azul-oscuro);
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+footer {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.25);
+}
+
+/* ================================
+   RESPONSIVE (CELULAR)
+   ================================ */
+@media (max-width: 768px) {
+
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+.botones-flotantes a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #25D366; /* verde WhatsApp */
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform .3s;
+}
+
+.botones-flotantes a:hover {
+    transform: scale(1.1);
+}
+
+.icono-wsp {
+    width: 28px;
+    height: 28px;
+}
